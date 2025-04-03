@@ -1,1 +1,6 @@
-/* Hello */
+div.grid {
+    display: grid;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
