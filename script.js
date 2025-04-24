@@ -4,8 +4,10 @@ document.getElementById("grid-0").style.gridTemplateColumns = "repeat("+GRIDSIZE
 even = false
 for (let y=0; y<GRIDSIZE; y++) {
     for (let x=0; x<GRIDSIZE; x++) {
+        let full = Math.random() > 0.5;
         document.getElementById("grid-0").innerHTML += 
-        "<div class='square square-full square-"+(even ? "even" : "odd")+"'></div>";
+        `<div class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
+        <input type='checkbox' /></div>`;
         even = !even
     }
 }
