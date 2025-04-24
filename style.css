@@ -1,7 +1,7 @@
 :root {
     --theme: #d9233e;
-    --board-0: #979ca5;
-    --board-1: #c2beb3;
+    --board-0: #fae4e7;
+    --board-1: #ffffff;
     --header-height: 50px;
 }
 
@@ -40,6 +40,11 @@ header>div {
     cursor: pointer;
 }
 
+.square:hover {
+    background-color: var(--theme);
+    transition: 0.2s ease-in-out;
+}
+
 .square-even {
     background-color: var(--board-0);
 }
@@ -49,5 +54,9 @@ header>div {
 }
 
 .square-full {
-    background-image: radial-gradient(#00000000 10%, #000000 10%, #000000 15%, #00000000 15%);
+    background-image: radial-gradient(#00000000 9%, #000000dd 10%, #000000dd 15%, #00000000 16%);
+}
+
+.square-full:hover {
+    background-image: radial-gradient(#00000000 14%, #000000dd 15%, #000000dd 20%, #00000000 21%);
 }
