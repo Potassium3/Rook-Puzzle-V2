@@ -37,7 +37,6 @@ header>div {
 }
 
 .square {
-    cursor: pointer;
     border: none;
 }
 
@@ -57,13 +56,13 @@ header>div {
     background-image: radial-gradient(#00000000 14%, #000000dd 15%, #000000dd 20%, #00000000 21%);
 }
 
-.square-full:has(input:checked) {
+.square-full:has(.radio:checked) {
     background-image: radial-gradient(#000000dd 0%, #000000dd 15%, #000000dd 20%, #00000000 21%);
     outline: none;
     z-index: 999;
 }
 
-.square-empty:has(input:checked) {
+.square-empty:has(.radio:checked) {
     background-image: radial-gradient(#00000044 0%, #00000044 15%, #00000044 20%, #00000000 21%);
     outline: none;
     z-index: 999;
