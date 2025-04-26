@@ -7,7 +7,8 @@ for (let y=0; y<GRIDSIZE; y++) {
         let full = Math.random() > 0.5;
         document.getElementById("grid-0").innerHTML += 
         `<div class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
-        <input type='checkbox' /></div>`;
+        <input class='radio' type='radio' name='squares' />
+        <input class='check' type='checkbox' /></div>`;
         even = !even
     }
 }
