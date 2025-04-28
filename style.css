@@ -93,6 +93,10 @@ header>div {
     background-color: #00000044;
 }
 
+.square:has(.square-a:visited) {
+    background-color: #000000;
+}
+
 .square-empty .square-cover{
     position: absolute;
     width: 100%;
