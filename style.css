@@ -90,8 +90,6 @@ header>div {
     left: -2500%;
     z-index: 999;
     clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%, 0 52%, 50% 52%, 50% 100%, 52% 100%, 52% 52%, 100% 52%, 100% 50%, 52% 50%, 52% 0, 100% 0, 100% 100%, 0 100%, 0 0);
-    background-color: var(--theme);
-    opacity: 0.5;
 }
 
 .square-empty .square-cover{
