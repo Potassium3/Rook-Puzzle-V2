@@ -93,7 +93,7 @@ header>div {
     background-color: #00000044;
 }
 
-.square:has(.square-a:visited) {
+.square:has(.square-radio:target) {
     background-color: #000000;
 }
 

@@ -8,7 +8,7 @@ function show(puzzle, elem) {
             let full = Math.random() > 0.5;
             elem.innerHTML += 
             `<div class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
-            <a class='square-a'><input class='square-radio' type='radio' name='squares' /></a>
+            <input class='square-radio' type='radio' name='squares' />
             <div class="square-cover"></div>
             </div>`;
             even = !even
