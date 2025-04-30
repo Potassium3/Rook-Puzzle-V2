@@ -26,11 +26,12 @@ header>div {
 .grid {
     display: grid;
     margin: auto;
+    padding: 2px;
     width: min(300px, calc(100% - 10px));
     max-width: calc(calc(100vh - 10px) - var(--header-height));
     aspect-ratio: 1;
-    /*row-gap: 2px;
-    column-gap: 2px;*/
+    row-gap: 2px;
+    column-gap: 2px;
     border: 2px solid var(--theme);
     border-radius: 4px;
     overflow: hidden;
