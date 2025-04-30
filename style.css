@@ -53,21 +53,16 @@ header>div {
     background-image: radial-gradient(#00000000 9%, #000000dd 10%, #000000dd 15%, #00000000 16%);
 }
 
-.square-full:has(.square-radio:hover) {
+.square-full:has(.square-check:hover) {
     background-image: radial-gradient(#00000000 14%, #000000dd 15%, #000000dd 20%, #00000000 21%);
 }
 
-.square-full:has(.square-radio:checked) {
+.square-full:has(.square-check:target) {
     background-image: radial-gradient(#000000dd 0%, #000000dd 15%, #000000dd 20%, #00000000 21%);
     outline: none;
 }
 
-.square-empty:has(.square-radio:checked) {
-    background-image: radial-gradient(#00000044 0%, #00000044 15%, #00000044 20%, #00000000 21%);
-    outline: none;
-}
-
-.square-radio {
+.square-check {
     position: absolute;
     top: 0;
     left: 0;
@@ -78,11 +73,7 @@ header>div {
     cursor: pointer;
 }
 
-.square:has(.square-radio:visited) {
-    opacity: 0;
-}
-
-.square:has(.square-radio:checked) .square-cover {
+.square:has(.square-check:target) .square-cover {
     position: absolute;
     width: 5000%;
     height: 5000%;
@@ -93,11 +84,7 @@ header>div {
     background-color: #00000044;
 }
 
-.square:has(.square-radio:target) {
-    background-color: #000000;
-}
-
-.square-empty .square-cover{
+.square-empty .square-cover {
     position: absolute;
     width: 100%;
     height: 100%;
