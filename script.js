@@ -7,7 +7,7 @@ function getHtml(puzzle) {
         for (let x=0; x<GRIDSIZE; x++) {
             let full = Math.random() > 0.5;
             let id = "s" + y + "-" + x;
-            result.innerHTML += 
+            result += 
             `<div id='${id}' class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
                 <a href="#${id}">
                     <input class='square-check' type='checkbox' /
