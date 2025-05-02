@@ -9,9 +9,9 @@ function getHtml(puzzle) {
             let id = "s" + y + "-" + x;
             result += 
             `<div id='${id}' class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
-                <a href="#${id}">
-                    <input class='square-check' type='checkbox' /
-                </a>
+                
+                <input class='square-check' type='checkbox' /
+                
                 <div class="square-cover"></div>
             </div>`;
             even = !even
