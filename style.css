@@ -3,6 +3,7 @@
     --board-0: #fae4e7;
     --board-1: #ffffff;
     --header-height: 50px;
+    --grid-width: 500px;
 }
 
 .text.title-text {
@@ -27,7 +28,7 @@ header>div {
     display: grid;
     margin: auto;
     padding: 2px;
-    width: min(300px, calc(100% - 10px));
+    width: min(var(--grid-width), calc(100% - 10px));
     max-width: calc(calc(100vh - 10px) - var(--header-height));
     aspect-ratio: 1;
     row-gap: 2px;
@@ -50,15 +51,23 @@ header>div {
     background-color: var(--board-1);
 }
 
-.square-full {
+.square-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.square-full .square-dot {
     background-image: radial-gradient(#00000000 9%, #000000dd 10%, #000000dd 15%, #00000000 16%);
 }
 
-.square-full:has(.square-check:hover) {
+.square-full:has(.square-check:hover) .square-dot {
     background-image: radial-gradient(#00000000 14%, #000000dd 15%, #000000dd 20%, #00000000 21%);
 }
 
-.square:has(.square-check:focus) {
+.square:has(.square-check:checked) .square-dot {
     background-image: radial-gradient(#000000dd 0%, #000000dd 15%, #000000dd 20%, #00000000 21%);
 }
 
@@ -73,15 +82,14 @@ header>div {
     cursor: pointer;
 }
 
-.square:has(.square-check:focus) .square-cover {
+.square:has(.square-check:checked) .square-cover {
     position: absolute;
     width: 5000%;
     height: 5000%;
     top: -2500%;
     left: -2500%;
-    z-index: 999;
+    z-index: 1000;
     clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%, 0 52%, 50% 52%, 50% 100%, 52% 100%, 52% 52%, 100% 52%, 100% 50%, 52% 50%, 52% 0, 100% 0, 100% 100%, 0 100%, 0 0);
-    background-color: #00000044;
 }
 
 .square-empty .square-cover {
@@ -90,4 +98,28 @@ header>div {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
+}
+
+.square .square-disable {
+    display: none;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    z-index: 1000;
+    background-color: #00000044;
+}
+
+.square:has(.square-check:checked) .square-disable, 
+.square-disable[style*="block"] {
+    display: block;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    z-index: 1000;
+    background-color: #00000044;
 }

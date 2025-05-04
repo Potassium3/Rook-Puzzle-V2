@@ -1,4 +1,4 @@
-const GRIDSIZE = 5; 
+const GRIDSIZE = 10; 
 
 function getHtml(puzzle) {
     result = "";
@@ -10,9 +10,10 @@ function getHtml(puzzle) {
             result += 
             `<div id='${id}' class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
                 
-                <input class='square-check' type='checkbox' /
-                
+                <div class='square-dot'></div>
                 <div class="square-cover"></div>
+                <input class='square-check' type='radio' name="squares"/>
+                <div class="square-disable"></div>
             </div>`;
             even = !even
         }
