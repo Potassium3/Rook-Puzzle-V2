@@ -51,6 +51,17 @@ header>div {
     background-color: var(--board-1);
 }
 
+.square-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
 .square-dot {
     position: absolute;
     top: 40%;
@@ -69,23 +80,21 @@ header>div {
     transform: scale(1.5);
 }
 
-.square:has(.square-check:checked) .square-dot {
+.square-full:has(.square-check:checked) .square-dot {
     clip-path: polygon(0 0, 20% 0, 20% 20%, 40% 20%, 40% 0%, 60% 0%, 60% 20%, 80% 20%, 80% 0%, 100% 0%, 100% 40%, 70% 40%, 70% 70%, 90% 70%, 90% 100%, 10% 100%, 10% 70%, 30% 70%, 30% 40%, 0% 40%, 0% 0%);
     transform: scale(1.5);
 }
 
-.square-check {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    cursor: pointer;
+.square-full:has(.square-disable:checked) .square-dot {
+    background-color: var(--theme);
+    transform: scale(2);
 }
 
-.square:has(.square-check:checked) .square-cover {
+.square-full:has(.square-disable:checked):has(.square-check:not(:checked)) .square-dot {
+    transform: scale(0);
+}
+
+.square-full:has(.square-check:checked):has(.square-disable:checked) .square-cover {
     position: absolute;
     width: 5000%;
     height: 5000%;
@@ -95,7 +104,17 @@ header>div {
     clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%, 0 52%, 50% 52%, 50% 100%, 52% 100%, 52% 52%, 100% 52%, 100% 50%, 52% 50%, 52% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
-.square-empty .square-cover {
+.square-full:has(.square-check:checked):has(.square-disable:not(:checked)) .square-cover {
+    position: absolute;
+    width: 5000%;
+    height: 5000%;
+    top: -2500%;
+    left: -2500%;
+    z-index: 1000;
+}
+
+.square-empty .square-cover,
+.square-full:has(.square-disable:checked) .square-cover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -104,19 +123,19 @@ header>div {
     z-index: 1000;
 }
 
-.square .square-disable {
+.square-disable {
     display: none;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    opacity: 0;
     margin: 0;
     z-index: 1000;
-    /*background-color: #00000044;*/
+    cursor: pointer;
 }
 
-.square:has(.square-check:checked) .square-disable, 
-.square-disable[display*="block"] {
+.square:has(.square-check:checked) .square-disable {
     display: block;
 }
