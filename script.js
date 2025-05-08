@@ -13,7 +13,7 @@ function getHtml(puzzle) {
                 <div class='square-dot'></div>
                 <div class="square-cover"></div>
                 <input class='square-check' type='radio' name="squares"/>
-                <div class="square-disable"></div>
+                <input class="square-disable" type='checkbox'></input>
             </div>`;
             even = !even
         }
