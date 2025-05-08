@@ -1,4 +1,4 @@
-const GRIDSIZE = 10; 
+const GRIDSIZE = 5; 
 
 function getHtml(puzzle) {
     result = "";
