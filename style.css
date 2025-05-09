@@ -86,8 +86,10 @@ header>div {
 }
 
 .square-full:has(.square-disable:checked) .square-dot {
-    background-color: var(--theme);
     transform: scale(2);
+}
+.square-full:has(.square-disable:checked):has(.square-check:checked) {
+    background-image: radial-gradient(transparent 40%, var(--theme) 50%, transparent 60%);
 }
 
 .square-full:has(.square-disable:checked):has(.square-check:not(:checked)) .square-dot {
