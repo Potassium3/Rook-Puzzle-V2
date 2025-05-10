@@ -7,7 +7,7 @@
     --grid-width: 300px;
 }
 
-.text.title-text {
+.title-text {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25pt;
     line-height: 50px;
@@ -35,16 +35,16 @@ header>a:hover {
 #home {
     display: none;
     position: fixed;
-    position: absolute;
     top: var(--header-height);
     left: 0;
     width: 100%;
     height: calc(100% - var(--header-height));
     background-color: black;
+    z-index: 10000;
 }
 
 #home:target {
-    display: auto;
+    display: block;
 }
 
 .grid {
