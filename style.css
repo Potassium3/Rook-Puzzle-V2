@@ -3,15 +3,14 @@
     --light-theme: #fae4e7;
     --board-0: #fae4e7;
     --board-1: #ffffff;
-    --header-height: 50px;
-    --header-wave-height: 20px;
-    --grid-width: 500px;
+    --header-height: 70px;
+    --grid-width: 300px;
 }
 
 .text.title-text {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25pt;
-    line-height: var(--header-height);
+    line-height: 50px;
 }
 
 header {
@@ -31,6 +30,21 @@ header>a {
 
 header>a:hover {
     color: var(--theme);
+}
+
+#home {
+    display: none;
+    position: fixed;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    background-color: black;
+}
+
+#home:target {
+    display: auto;
 }
 
 .grid {
