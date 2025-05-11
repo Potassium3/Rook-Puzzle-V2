@@ -1,7 +1,7 @@
 :root {
-    --theme: #d9233e;
-    --light-theme: #fae4e7;
-    --board-0: #fae4e7;
+    --theme: #2f009c; /* ff0026 */
+    --light-theme: #f3e4fa;
+    --board-0: #f3e4fa; /* #fae4e7 */
     --board-1: #ffffff;
     --header-height: 70px;
     --grid-width: 300px;
