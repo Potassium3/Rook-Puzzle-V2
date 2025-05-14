@@ -1,7 +1,11 @@
 :root {
-    --theme: #ff0026; /* ff0026 */
-    --light-theme: #fae6e4;
-    --board-0: #fae6e4; /* #fae4e7 */
+    --cy: #11f5d6;
+    --cy-2: #b3d2cf;
+    --cy-3: #4a5654;
+    --yel: #f5bd13;
+    --yel-2: #7a6629;
+    --dark: #0d0c09;
+    --board-0: var(--yel); /* #fae4e7 */
     --board-1: #ffffff;
     --header-height: 70px;
     --grid-width: 300px;
@@ -18,7 +22,7 @@
     border: none;
     height: 40px;
     width: fit-content;
-    padding: 5px 10px 0;
+    padding: 8px 10px 0;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -27,23 +31,15 @@
     clip-path: polygon(0 0, 14.3% 0, 14.3% 10px, 28.6% 10px, 28.6% 0, 42.9% 0, 42.9% 10px, 57.1% 10px, 57.1% 0, 71.4% 0, 71.4% 10px, 85.7% 10px, 85.7% 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.button:hover {
+    background-color: var(--cy-3);
+}
+
 header {
     width: 100%;
     height: var(--header-height);
-    background-color: var(--light-theme);
+    background-color: var(--cy-2);
     padding-bottom: var(--header-wave-height);
-}
-
-header>a {
-    width: fit-content;
-    height: inherit;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;;
-}
-
-header>a:hover {
-    color: var(--theme);
 }
 
 .grid {
@@ -55,7 +51,7 @@ header>a:hover {
     aspect-ratio: 1;
     row-gap: 2px;
     column-gap: 2px;
-    border: 2px solid var(--theme);
+    border: 2px solid var(--cy-3);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -66,11 +62,11 @@ header>a:hover {
 }
 
 .square-even {
-    background-color: var(--board-0);
+    background-color: var(--cy-2);
 }
 
 .square-odd {
-    background-color: var(--board-1);
+    background-color: white;
 }
 
 .square-check {
@@ -111,7 +107,7 @@ header>a:hover {
     transform: scale(2);
 }
 .square-full:has(.square-disable:checked):has(.square-check:checked) {
-    background-image: radial-gradient(transparent 49%, var(--theme) 50%, var(--theme) 55%, transparent 56%);
+    background-image: radial-gradient(transparent 49%, var(--cy) 50%, var(--cy) 55%, transparent 56%);
 }
 
 .square-full:has(.square-disable:checked):has(.square-check:not(:checked)) .square-dot {
