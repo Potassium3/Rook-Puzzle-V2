@@ -1,16 +1,30 @@
 :root {
-    --theme: #2f009c; /* ff0026 */
-    --light-theme: #f3e4fa;
-    --board-0: #f3e4fa; /* #fae4e7 */
+    --theme: #ff0026; /* ff0026 */
+    --light-theme: #fae6e4;
+    --board-0: #fae6e4; /* #fae4e7 */
     --board-1: #ffffff;
     --header-height: 70px;
     --grid-width: 300px;
-}
+} /* Adobe: 11F5D6, 529E94, 4A5654, F5BD13, 7A6629, 0D0C09 */
 
 .title-text {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25pt;
     line-height: 50px;
+}
+
+.button-rook {
+    background-color: black;
+    border: none;
+    height: 40px;
+    width: fit-content;
+    padding: 5px 10px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 20px 20px;
+    clip-path: polygon(0 0, 15% 0, 15% 10px, 30% 10px, 30% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 header {
@@ -32,21 +46,6 @@ header>a:hover {
     color: var(--theme);
 }
 
-#home {
-    display: none;
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    height: calc(100% - var(--header-height));
-    background-color: black;
-    z-index: 10000;
-}
-
-#home:target {
-    display: block;
-}
-
 .grid {
     display: grid;
     margin: auto;
@@ -59,10 +58,6 @@ header>a:hover {
     border: 2px solid var(--theme);
     border-radius: 4px;
     overflow: hidden;
-}
-
-.grid:not(:has(.square:has(.square-disable:not(:checked)):has(.square-check:checked))) {
-    background-color: var(--theme);
 }
 
 .square {
