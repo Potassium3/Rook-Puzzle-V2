@@ -61,7 +61,7 @@ header>a:hover {
     overflow: hidden;
 }
 
-.grid:not(:has(.square-disable:not(:checked))) {
+.grid:not(:has(.square:has(.square-disable:not(:checked)):has(.square-check:checked))) {
     background-color: var(--theme);
 }
 
