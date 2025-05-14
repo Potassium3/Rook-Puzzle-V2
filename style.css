@@ -61,6 +61,10 @@ header>a:hover {
     overflow: hidden;
 }
 
+.grid:not(:has(.square-disable:not(:checked))) {
+    background-color: var(--theme);
+}
+
 .square {
     position: relative;
     border: none;
@@ -112,7 +116,7 @@ header>a:hover {
     transform: scale(2);
 }
 .square-full:has(.square-disable:checked):has(.square-check:checked) {
-    background-image: radial-gradient(transparent 40%, var(--theme) 50%, transparent 60%);
+    background-image: radial-gradient(transparent 49%, var(--theme) 50%, var(--theme) 55%, transparent 56%);
 }
 
 .square-full:has(.square-disable:checked):has(.square-check:not(:checked)) .square-dot {
