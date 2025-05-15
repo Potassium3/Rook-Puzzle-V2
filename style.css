@@ -8,6 +8,7 @@
     --board-0: #f5bd13;
     --board-1: white;
     --header-height: 70px;
+    --header-wave-height: 20px;
     --grid-width: 300px;
 }
 
@@ -43,7 +44,6 @@ header {
     width: 100%;
     height: var(--header-height);
     background-color: var(--cy-2);
-    padding-bottom: var(--header-wave-height);
 }
 
 .header-section {
