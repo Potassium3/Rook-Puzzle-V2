@@ -1,9 +1,8 @@
 :root {
-    --cy: #11f5d6;
-    --cy-2: #b3d2cf;
-    --cy-3: #4a5654;
-    --yel: #f5bd13;
-    --yel-2: #7a6629;
+    --t: #b3d2cf;
+    --t-2: #4a5654;
+    --y: #f5bd13;
+    --y-2: #7a6629;
     --dark: #0d0c09;
     --board-0: #f5bd13;
     --board-1: white;
@@ -36,23 +35,38 @@
 }
 
 .button:hover {
-    color: var(--cy);
+    color: var(--t);
 }
 
 header {
     position: relative;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--cy-2);
+    background-color: var(--t);
 }
 
 .header-section {
+    display: flex;
+    flex-direction: row;
+    gap: var(--header-wave-height);
+    flex-wrap: nowrap;
     position: absolute;
     top: calc(var(--header-height) - var(--header-wave-height));
     left: 0;
     width: 100%;
     height: var(--header-wave-height);
-    background-color: var(--yel);
+    background-color: white;
+    overflow: hidden;
+}
+
+.header-section-wave {
+    height: 100%;
+    aspect-ratio: 1.5;
+    background-color: var(--t);
+}
+
+main {
+    margin: 20px auto auto;
 }
 
 .grid {
@@ -61,7 +75,7 @@ header {
     width: min(var(--grid-width), calc(100% - 10px));
     max-width: calc(calc(100vh - 10px) - var(--header-height));
     aspect-ratio: 1;
-    border: 2px solid var(--cy-3);
+    border: 2px solid var(--y-2);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -100,7 +114,7 @@ header {
 
 .square-full .square-dot {
     transition-duration: 0.3s;
-    background-color: #000000;
+    background-color: black;
     clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%, 20% 0%, 30% 30%, 30% 70%, 70% 70%, 70% 30%, 30% 30%, 20% 0, 20% 0, 20% 0, 20% 0, 20% 0, 20% 0, 20% 0);
 }
 
