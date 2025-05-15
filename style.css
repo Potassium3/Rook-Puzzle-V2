@@ -52,7 +52,6 @@ header {
     flex-wrap: nowrap;
     position: absolute;
     top: calc(var(--header-height) - var(--header-wave-height));
-    left: 0;
     width: 100%;
     height: var(--header-wave-height);
     background-color: white;
