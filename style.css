@@ -60,9 +60,10 @@
     height: 100%;
     background-color: var(--t);
     display: none;
+    z-index: 1000;
 }
 
-*:has(.menu-input-home:checked) .menu-home {
+body:has(.menu-input-home:checked) .menu-home {
     display: block;
 }
 
