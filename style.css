@@ -4,7 +4,7 @@
     --y: #f5bd13;
     --y-2: #7a6629;
     --dark: #0d0c09;
-    --board-0: #f5bd13;
+    --board-0: #b3d2cf;
     --board-1: white;
     --header-height: 70px;
     --header-wave-height: 20px;
@@ -71,7 +71,7 @@ header {
     position: relative;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--t);
+    background-color: var(--t-2);
 }
 
 .header-section {
@@ -92,15 +92,15 @@ header {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-166.7%);
+        transform: translateX(-200%);
     }
 }
 
 .header-section-wave {
     height: 100%;
-    aspect-ratio: 1.5;
-    background-color: var(--t);
-    animation: wave 1s infinite linear;
+    aspect-ratio: 1;
+    background-color: var(--t-2);
+    animation: wave 3s infinite linear;
 }
 
 main {
