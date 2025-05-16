@@ -87,10 +87,20 @@ header {
     overflow: hidden;
 }
 
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 .header-section-wave {
     height: 100%;
     aspect-ratio: 1.5;
     background-color: var(--t);
+    animation: wave 1s infinite;
 }
 
 main {
