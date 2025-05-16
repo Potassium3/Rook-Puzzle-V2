@@ -62,7 +62,7 @@
     display: none;
 }
 
-.t:has(.menu-input-home) .menu-home {
+*:has(.menu-input-home:checked) .menu-home {
     display: block;
 }
 
