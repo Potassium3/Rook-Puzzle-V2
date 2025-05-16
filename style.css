@@ -100,7 +100,7 @@ header {
     height: 100%;
     aspect-ratio: 1.5;
     background-color: var(--t);
-    animation: wave 1s infinite;
+    animation: wave 1s infinite linear;
 }
 
 main {
