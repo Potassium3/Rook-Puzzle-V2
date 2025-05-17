@@ -71,6 +71,7 @@ h1 {
     display: none;
     z-index: 1000;
     animation: menu 0.2s forwards;
+    text-align: center;
 }
 
 .menu-home {
