@@ -113,7 +113,7 @@ main {
     width: min(var(--grid-width), calc(100% - 10px));
     max-width: calc(calc(100vh - 10px) - var(--header-height));
     aspect-ratio: 1;
-    border: 2px solid var(--y-2);
+    border: 2px solid var(--t-2);
     border-radius: 4px;
     overflow: hidden;
 }
