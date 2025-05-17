@@ -1,8 +1,6 @@
 :root {
     --t: #b3d2cf;
     --t-2: #4a5654;
-    --y: #f5bd13;
-    --y-2: #7a6629;
     --dark: #0d0c09;
     --board-0: #b3d2cf;
     --board-1: white;
@@ -52,6 +50,18 @@
 
 /* Start of main code */
 
+@keyframes menu {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 .menu {
     position: absolute;
     top: 0;
@@ -61,6 +71,7 @@
     background-color: var(--t);
     display: none;
     z-index: 1000;
+    animation: menu 0.2s forwards;
 }
 
 body:has(.menu-input-home:checked) .menu-home {
