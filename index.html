@@ -8,7 +8,7 @@
 <body>
     <!--Starting menu code-->
     <input style="display:none;" type="radio" name="menu" class="menu-input menu-input-home" checked>
-    <div class="menu menu-home">
+    <div class="menu menu-popup menu-home">
         <h1>Welcome to Rook Puzzle!</h1>
         <small>A daily puzzle based on the chess rook</small>
         <button class="button button-rook">
@@ -20,7 +20,7 @@
             <input type="radio" name="menu" class="menu-input menu-input-play">
         </button>
     </div>
-    <div class="menu menu-tutorial">
+    <div class="menu menu-popup menu-tutorial">
         <h1>Tutorial</h1>
         <small>How to play</small>
         <button class="button button-rook">
@@ -28,25 +28,14 @@
             <input type="radio" name="menu" class="menu-input menu-input-play">
         </button>
     </div>
-    <div class="menu menu-menu">
-        <h1>Menu</h1>
-        <button class="button button-rook">
-            Home
-            <input type="radio" name="menu" class="menu-input menu-input-home">
-        </button>
-        <button class="button button-rook">
-            Easy Puzzle
-            <input type="radio" name="menu" class="menu-input menu-input-play">
-        </button>
-    </div>
 
     <header>
-        <h1 style="color:white;text-align:center;">
+        <h1 class="header-label" style="color:white;text-align:center;">
             <button class="button button-menu">
                 <div class="button-menu-shape"></div>
                 <input type="radio" name="menu" class="menu-input menu-input-menu">
             </button>
-            Rook Puzzle</h1>
+            </h1>
         <div class="header-section">
             <div class="header-section-wave"></div>
             <div class="header-section-wave"></div>
@@ -79,8 +68,18 @@
         </div>
     </header>
     <main>
-        <div id="grid-0" class="grid">
+        <div id="grid-0" class="menu menu-play grid">
             <!--script.js-->
+        </div>
+        <div class="menu menu-menu">
+            <button class="button button-rook">
+                Home
+                <input type="radio" name="menu" class="menu-input menu-input-home">
+            </button>
+            <button class="button button-rook">
+                Easy Puzzle
+                <input type="radio" name="menu" class="menu-input menu-input-play">
+            </button>
         </div>
     </main>
 </body>
