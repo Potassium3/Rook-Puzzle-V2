@@ -136,7 +136,7 @@ body:has(.menu-input-menu:checked) .menu-menu {
 }
 
 body:has(.menu-input-play:checked) .menu-play {
-    display: grid;
+    display: block;
 }
 
 body:has(.menu-input-play:checked) .header-label::after {
