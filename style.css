@@ -222,6 +222,7 @@ header {
     width: 100%;
     height: var(--header-height);
     background-color: var(--t-2);
+    overflow: hidden;
 }
 
 .header-section {
@@ -251,6 +252,12 @@ header {
     aspect-ratio: 1;
     background-color: var(--t-2);
     animation: wave 3s infinite linear;
+}
+
+.header-label {
+    width: 250px;
+    margin: auto;
+    overflow: hidden;
 }
 
 main {
