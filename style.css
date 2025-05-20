@@ -92,6 +92,7 @@ body:has(.menu-input-menu:checked) .button-menu {
 }
 
 .button-close {
+    display: inline-block;
     position: relative;
     border: none;
     height: 25px;
@@ -240,10 +241,10 @@ header {
 
 @keyframes wave {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
     }
 }
 
@@ -255,9 +256,9 @@ header {
 }
 
 .header-label {
-    width: 250px;
-    margin: auto;
+    width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 main {
@@ -267,8 +268,8 @@ main {
 .grid {
     display: grid;
     margin: auto;
-    width: min(var(--grid-width), calc(100% - 10px));
-    max-width: calc(calc(100vh - 10px) - var(--header-height));
+    width: min(var(--grid-width), calc(100% - 20px));
+    max-width: calc(calc(100vh - 10px) - calc(var(--header-height) + var(--header-wave-height)));
     aspect-ratio: 1;
     border: 2px solid var(--t-2);
     border-radius: 4px;
