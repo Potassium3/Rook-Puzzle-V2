@@ -2,6 +2,7 @@
     --t: #b3d2cf;
     --t-2: #4a5654;
     --dark: #0d0c09;
+    --light: #b8b8b8;
     --board-0: #b3d2cf;
     --board-1: white;
     --header-height: 70px;
@@ -147,17 +148,18 @@ body:has(.menu-input-play:checked) .button-close {
     content: ">";
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 30px;
-    color: black;
+    color: var(--light);
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    right: 50px;
+    right: 30px;
     transition: right 0.2s;
 }
 
 .button-option:hover::after,
 .button-option:focus::after {
     right: 10px;
+    color: black;
 }
 
 /* START OF NON-GENERAL CODE*/
@@ -187,6 +189,7 @@ body:has(.menu-input-play:checked) .button-close {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     animation: menu 0.2s forwards;
+    overflow: scroll;
 }
 
 .menu-home {
@@ -203,6 +206,9 @@ body:has(.menu-input-tutorial:checked) .menu-tutorial {
     display: block;
 }
 
+.menu-menu {
+    padding: 20px;
+}
 body:has(.menu-input-menu:checked) .menu-menu {
     display: block;
 }
