@@ -193,10 +193,19 @@ body:has(.menu-input-play:checked) .button-close {
 }
 
 .menu-home {
-    background-color: var(--t);
+    background-color: white;
 }
 body:has(.menu-input-home:checked) .menu-home {
     display: block;
+}
+
+.menu-home-section-two {
+    position: absolute;
+    top: 38%;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    background-color: var(--t);
 }
 
 .menu-tutorial {
