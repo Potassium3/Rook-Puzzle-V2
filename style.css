@@ -6,7 +6,7 @@
     --board-0: #b3d2cf;
     --board-1: white;
     --header-height: 70px;
-    --header-wave-height: 20px;
+    --wave-height: 20px;
     --grid-width: 300px;
 }
 
@@ -213,11 +213,11 @@ body:has(.menu-input-home:checked) .menu-home {
     padding: 20px;
 }
 
-.menu-home-section {
+.menu-home-wave-container {
     display: flex;
     flex-direction: row;
-    gap: var(--header-wave-height);
-    height: var(--header-wave-height);
+    gap: var(--wave-height);
+    height: var(--wave-height);
     flex-wrap: nowrap;
     position: absolute;
     width: 100%;
@@ -225,11 +225,17 @@ body:has(.menu-input-home:checked) .menu-home {
     overflow: hidden;
 }
 
-.menu-home-section-wave {
+.menu-home-wave-wave {
     height: 100%;
     aspect-ratio: 1;
     background-color: var(--t);
     animation: wave 3s infinite linear;
+}
+
+.menu-home-section-two {
+    width: calc(100% - 40px);
+    height: fit-content;
+    padding: 40px 20px 20px;
 }
 
 .menu-tutorial {
@@ -269,12 +275,12 @@ header {
 .header-section {
     display: flex;
     flex-direction: row;
-    gap: var(--header-wave-height);
+    gap: var(--wave-height);
     flex-wrap: nowrap;
     position: absolute;
-    top: calc(var(--header-height) - var(--header-wave-height));
+    top: calc(var(--header-height) - var(--wave-height));
     width: 100%;
-    height: var(--header-wave-height);
+    height: var(--wave-height);
     background-color: white;
     overflow: hidden;
 }
