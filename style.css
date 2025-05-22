@@ -49,6 +49,7 @@ small {
     border: none;
     height: 40px;
     width: 150px;
+    margin: 5px;
     padding: 10px 10px 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 30px;
@@ -185,27 +186,43 @@ body:has(.menu-input-play:checked) .button-close {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: calc(100%);
+    height: calc(100%);
     animation: menu 0.2s forwards;
     overflow: scroll;
 }
 
 .menu-home {
-    background-color: white;
+    background-color: var(--t);
 }
 body:has(.menu-input-home:checked) .menu-home {
     display: block;
 }
 
-.menu-home-section-two {
+.menu-home-section-one {
+    width: calc(100% - 40px);
+    height: fit-content;
+    background-color: white;
+    padding: 20px;
+}
+
+.menu-home-section {
+    display: flex;
+    flex-direction: row;
+    gap: var(--header-wave-height);
+    height: var(--header-wave-height);
+    flex-wrap: nowrap;
     position: absolute;
-    top: 38%;
-    left: 0;
     width: 100%;
-    height: 62%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.menu-home-section-wave {
+    height: 100%;
+    aspect-ratio: 1;
     background-color: var(--t);
+    animation: wave 3s infinite linear;
 }
 
 .menu-tutorial {
