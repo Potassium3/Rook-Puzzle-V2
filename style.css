@@ -63,7 +63,7 @@ small {
 }
 
 .button-rook:hover {
-    color: var(--t);
+    background-color: var(--blue-dark);
 }
 
 .button-menu {
@@ -91,7 +91,7 @@ body:has(.menu-input-menu:checked) .button-menu {
 }
 
 .button-menu:hover .button-menu-shape {
-    background-color: var(--t-3);
+    background-color: var(--blue-med);
 }
 
 .button-close {
@@ -119,7 +119,7 @@ body:has(.menu-input-play:checked) .button-close {
 }
 
 .button-close:hover .button-close-shape {
-    background-color: var(--t-3);
+    background-color: var(--blue-med);
 }
 
 .button-option {
@@ -141,7 +141,7 @@ body:has(.menu-input-play:checked) .button-close {
 
 .button-option:hover,
 .button-option:focus {
-    background-color: var(--t);
+    background-color: var(--blue-light);
     transform: translateX(10px);
 }
 
