@@ -21,6 +21,7 @@ function getHtml(puzzle) {
             even = !even
         }
     }
+    console.log(result);
     return result;
 }
 

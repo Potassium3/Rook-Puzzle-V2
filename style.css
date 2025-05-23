@@ -135,7 +135,6 @@ body:has(.menu-input-play:checked) .button-close {
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-left: 4px solid var(--t-2);
     transition: transform 0.2s;
 }
 
