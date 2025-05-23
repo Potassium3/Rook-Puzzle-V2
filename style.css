@@ -1,7 +1,7 @@
 :root {
-    --t: #b8d6de;
-    --t-2: #017cc2;
-    --t-3: #0d2a67;
+    --blue-light: #b8d6de;
+    --blue-med: #017cc2;
+    --blue-dark: #0d2a67;
     --grey: #dbdadc;
     --dark: #0d0c09;
     --board-0: #dbdadc;
@@ -91,7 +91,7 @@ body:has(.menu-input-menu:checked) .button-menu {
 }
 
 .button-menu:hover .button-menu-shape {
-    background-color: var(--t);
+    background-color: var(--t-3);
 }
 
 .button-close {
@@ -119,7 +119,7 @@ body:has(.menu-input-play:checked) .button-close {
 }
 
 .button-close:hover .button-close-shape {
-    background-color: var(--t);
+    background-color: var(--t-3);
 }
 
 .button-option {
