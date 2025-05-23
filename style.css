@@ -239,7 +239,7 @@ body:has(.menu-input-home:checked) .menu-home {
 }
 
 .menu-tutorial {
-    background-color: var(--t);
+    background-color: white;
 }
 body:has(.menu-input-tutorial:checked) .menu-tutorial {
     display: block;
