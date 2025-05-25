@@ -138,6 +138,17 @@ body:has(.menu-input-menu-home:checked) .button-close-home {
     display: inline-block;
 }
 
+@keyframes button-option {
+    0% {
+        margin-top: -20px;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
 .button-option,
 .button-backoption {
     display: block;
@@ -155,6 +166,7 @@ body:has(.menu-input-menu-home:checked) .button-close-home {
     cursor: pointer;
     border: none;
     border-top: 1px solid transparent;
+    animation: button-option 0.5s forwards
 }
 
 .button-option {
