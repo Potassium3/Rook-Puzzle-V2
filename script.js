@@ -7,6 +7,18 @@ function getHtml(puzzle) {
         for (let x=0; x<GRIDSIZE; x++) {
             let full = Math.random() > 0.5;
             let id = "s" + y + "-" + x;
+
+            if (x == 0 && y == 0) {
+                result += 
+                `<div id='${id}' class='square square-full square-${even ? "even" : "odd"}'>
+                    <div class='square-dot'></div>
+                    <div class="square-cover"></div>
+                    <input class='square-check' type='radio' name="squares" checked/>
+                    <input class="square-disable" type='checkbox'></input>
+                </div>`
+                even = !even;
+                continue;
+            }
             result += 
             `<div id='${id}' class='square square-${full ? "full" : "empty"} square-${even ? "even" : "odd"}'>
                 
