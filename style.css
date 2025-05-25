@@ -25,6 +25,16 @@ h1 {
     font-weight: semi-bold;
 }
 
+h2 {
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18pt;
+    line-height: 40px;
+    font-style: normal;
+    font-weight: semi-bold;
+    color: var(--t-dullblue);
+}
+
 small {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
@@ -85,8 +95,14 @@ small {
     background-color: transparent;
 }
 
-body:has(.menu-input-menu:checked) .button-menu {
-    display: none;
+.button-close {
+    display: inline-block;
+    position: relative;
+    border: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .button-shape {
@@ -98,39 +114,42 @@ body:has(.menu-input-menu:checked) .button-menu {
     height: 100%;
 }
 
-.button-menu:hover .button-menu-shape {
-    background-color: var(--t-brown);
-}
-
-.button-close {
-    display: inline-block;
-    position: relative;
-    border: none;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-body:has(.menu-input-play:checked) .button-close {
+.button-menu-easy,
+.button-menu-medium,
+.button-close-easy,
+.button-close-medium,
+.button-close-home {
     display: none;
 }
 
-.button-close:hover .button-close-shape {
-    background-color: var(--t-brown);
+body:has(.menu-input-play-medium:checked) .button-menu-medium {
+    display: inline-block;
+}
+body:has(.menu-input-play-easy:checked) .button-menu-easy {
+    display: inline-block;
+}
+body:has(.menu-input-menu-medium:checked) .button-close-medium {
+    display: inline-block;
+}
+body:has(.menu-input-menu-easy:checked) .button-close-easy {
+    display: inline-block;
+}
+body:has(.menu-input-menu-home:checked) .button-close-home {
+    display: inline-block;
 }
 
-.button-option {
+.button-option,
+.button-backoption {
     display: block;
     margin: auto;
     position: relative;
     width: 100%;
     max-width: 300px;
     height: 40px;
+    padding: 4px 0 0;
     background-color: transparent;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 30px;
-    color: black;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -138,15 +157,29 @@ body:has(.menu-input-play:checked) .button-close {
     border-top: 1px solid transparent;
 }
 
-.button-option:not(:hover,:focus)+.button-option:not(:hover,:focus) {
+.button-option {
+    color: black;
+}
+
+.button-backoption {
+    color: var(--t-yellow);
+}
+
+.button-option:not(:hover,:focus)+.button-option:not(:hover,:focus),
+.button-backoption:not(:hover,:focus)+.button-option:not(:hover,:focus),
+.button-option:not(:hover,:focus)+.button-backoption:not(:hover,:focus),
+.button-backoption:not(:hover,:focus)+.button-backoption:not(:hover,:focus) {
     border-top: 1px solid var(--t-grey);
 }
 
 .button-option:has(:hover),
-.button-option:has(:focus) {
-    background-color: var(--t-yellow);
+.button-option:has(:focus),
+.button-backoption:has(:hover),
+.button-backoption:has(:focus) {
+    background-color: var(--t-blue);
     border: none;
-    border-top: 1px solid var(--t-yellow);
+    border-top: 1px solid var(--t-blue);
+    color: black;
 }
 
 .button-option::after {
@@ -164,6 +197,24 @@ body:has(.menu-input-play:checked) .button-close {
 .button-option:hover::after,
 .button-option:focus::after {
     right: 10px;
+    color: black;
+}
+
+.button-backoption::before {
+    content: "<";
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 30px;
+    color: var(--t-grey);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 30px;
+    transition: left 0.2s;
+}
+
+.button-backoption:hover::before,
+.button-backoption:focus::before {
+    left: 10px;
     color: black;
 }
 
@@ -270,18 +321,26 @@ body:has(.menu-input-tutorial:checked) .menu-tutorial {
 .menu-menu {
     padding: 20px;
 }
-body:has(.menu-input-menu:checked) .menu-menu {
+body:has(.menu-input-menu-easy:checked) .menu-menu-easy {
+    display: block;
+}
+body:has(.menu-input-menu-medium:checked) .menu-menu-medium {
+    display: block;
+}
+body:has(.menu-input-menu-home:checked) .menu-menu-home {
     display: block;
 }
 
-body:has(.menu-input-play:checked) .menu-play {
+body:has(.menu-input-play-easy:checked) .menu-play-easy {
+    display: block;
+}
+body:has(.menu-input-play-medium:checked) .menu-play-medium {
     display: block;
 }
 
 body:has(.menu-input-play:checked) .header-label::after {
     content: "Rook Puzzle";
 }
-
 body:has(.menu-input-menu:checked) .header-label::after {
     content: "Menu";
 }
