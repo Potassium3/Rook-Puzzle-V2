@@ -329,6 +329,38 @@ body:has(.menu-input-home:checked) .menu-home {
 body:has(.menu-input-tutorial:checked) .menu-tutorial {
     display: block;
 }
+.menu-tutorial-nav {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100px;
+    height: 50px;
+    bottom: 5px;
+    left: calc(50% - 50px);
+}
+.menu-tutorial-nav-item {
+    flex-grow: 1;
+    height: 50%;
+    transform: translateY(100%);
+    background-color: var(--t-brown);
+    transition: height 0.2s, transform 0.2s;
+    clip-path: polygon(25% 0, 75% 0, 75% calc(100% - 5px), 100% calc(100% - 5px), 100% 100%, 0 100%, 0 calc(100% - 5px), 25% calc(100% - 5px));
+}
+.menu-tutorial-nav-item:hover {
+    background-color: black;
+}
+body:has(.menu-input-tutorial-0:checked) .menu-tutorial-nav-item-0 {
+    height: 100%;
+    transform: none;
+}
+body:has(.menu-input-tutorial-1:checked) .menu-tutorial-nav-item-1 {
+    height: 100%;
+    transform: none;
+}
+body:has(.menu-input-tutorial-2:checked) .menu-tutorial-nav-item-2 {
+    height: 100%;
+    transform: none;
+}
 
 .menu-menu {
     padding: 20px;
