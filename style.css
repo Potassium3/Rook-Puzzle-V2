@@ -361,6 +361,18 @@ body:has(.menu-input-tutorial-2:checked) .menu-tutorial-nav-item-2 {
     height: 100%;
     transform: none;
 }
+.menu-tutorial-section {
+    display: none;
+}
+body:has(.menu-input-tutorial-0:checked) .menu-tutorial-section-0 {
+    display: block;
+}
+body:has(.menu-input-tutorial-1:checked) .menu-tutorial-section-1 {
+    display: block;
+}
+body:has(.menu-input-tutorial-2:checked) .menu-tutorial-section-2 {
+    display: block;
+}
 
 .menu-menu {
     padding: 20px;
