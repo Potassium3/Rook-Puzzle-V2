@@ -63,12 +63,18 @@
         <h1>Tutorial</h1>
         <small>How to play</small>
         <div class="menu-tutorial-section menu-tutorial-section-0">
-            <div class="grid" id="grid-tutorial" style="grid-template-columns:repeat(3,auto);">
+            <div class="menu-tutorial-info menu-tutorial-info-0">
+                First click the rook. (
+                <div class="icon-rook" style="display: inline-block;"></div>
+                )
+            </div>
+            <div class="grid" style="grid-template-columns:repeat(3,auto);">
                 <div id="s0-0" class="square square-full square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
                     <input class="square-check" type="radio" name="tutorial" checked>
                     <input class="square-disable" type="checkbox">
+                    <input class="square-menu menu-input menu-input-tutorial menu-input-tutorial-1" type="radio" name="menu">
                 </div>
                 <div id="s0-1" class="square square-empty square-even">
                     <div class="square-dot"></div>
@@ -79,7 +85,7 @@
                 <div id="s0-2" class="square square-full square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check menu-input menu-input-tutorial menu-input-tutorial-1" type="radio" name="menu">
+                    <input class="square-check" type="radio" name="tutorial">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s1-0" class="square square-empty square-even">
@@ -121,59 +127,62 @@
             </div>
         </div>
         <div class="menu-tutorial-section menu-tutorial-section-1">
+            <div class="menu-tutorial-info menu-tutorial-info-1">Now click the dot on its right</div>
             <div class="grid" id="grid-tutorial" style="grid-template-columns:repeat(3,auto);">
                 <div id="s0-0" class="square square-full square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0" checked>
+                    <input class="square-check" type="radio" name="tutorial-1" checked>
                     <input class="square-disable" type="checkbox" checked>
+                    <input class="square-menu menu-input menu-input-tutorial menu-input-tutorial-0" type="radio" name="menu">
                 </div>
                 <div id="s0-1" class="square square-empty square-even">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s0-2" class="square square-full square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0" checked>
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
+                    <input class="square-menu menu-input menu-input-tutorial menu-input-tutorial-2" type="radio" name="menu">
                 </div>
                 <div id="s1-0" class="square square-empty square-even">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s1-1" class="square square-full square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s1-2" class="square square-full square-even">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s2-0" class="square square-empty square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s2-1" class="square square-empty square-even">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
                 <div id="s2-2" class="square square-empty square-odd">
                     <div class="square-dot"></div>
                     <div class="square-cover"></div>
-                    <input class="square-check" type="radio" name="tutorial-0">
+                    <input class="square-check" type="radio" name="tutorial-1">
                     <input class="square-disable" type="checkbox">
                 </div>
             </div>
@@ -182,11 +191,11 @@
             <label class="button button-nav menu-tutorial-nav-item menu-tutorial-nav-item-0">
                 <input type="radio" name="menu" class="menu-input menu-input-tutorial menu-input-tutorial-0" tabindex="0">
             </label>
-            <label class="button button-nav menu-tutorial-nav-item menu-tutorial-nav-item-1">
-                <input type="radio" name="menu" class="menu-input menu-input-tutorial menu-input-tutorial-1" tabindex="0">
-            </label>
             <label class="button button-nav menu-tutorial-nav-item menu-tutorial-nav-item-2">
                 <input type="radio" name="menu" class="menu-input menu-input-tutorial menu-input-tutorial-2" tabindex="0">
+            </label>
+            <label class="button button-nav menu-tutorial-nav-item menu-tutorial-nav-item-3">
+                <input type="radio" name="menu" class="menu-input menu-input-tutorial menu-input-tutorial-3" tabindex="0">
             </label>
         </div>
     </div>

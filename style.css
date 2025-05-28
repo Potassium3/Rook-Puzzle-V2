@@ -329,6 +329,16 @@ body:has(.menu-input-home:checked) .menu-home {
 body:has(.menu-input-tutorial:checked) .menu-tutorial {
     display: block;
 }
+.menu-tutorial-info {
+    width: 100%;
+    max-width: var(--grid-width);
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    border: 4px solid var(--t-dullblue);
+    border-radius: 4px;
+    margin: 0 auto 20px;
+}
 .menu-tutorial-nav {
     display: flex;
     position: absolute;
@@ -353,7 +363,7 @@ body:has(.menu-input-tutorial-0:checked) .menu-tutorial-nav-item-0 {
     height: 100%;
     transform: none;
 }
-body:has(.menu-input-tutorial-1:checked) .menu-tutorial-nav-item-1 {
+body:has(.menu-input-tutorial-1:checked) .menu-tutorial-nav-item-0 {
     height: 100%;
     transform: none;
 }
@@ -593,4 +603,16 @@ main {
 
 .square:has(.square-check:checked) .square-disable {
     display: block;
+}
+
+.square-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
 }
